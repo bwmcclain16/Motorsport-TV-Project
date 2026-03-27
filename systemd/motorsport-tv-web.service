@@ -1,0 +1,14 @@
+[Unit]
+Description=Motorsport TV Web UI (Vite Preview)
+After=network.target motorsport-tv-api.service
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/motorsport-tv
+ExecStart=/usr/bin/npm --workspace apps/web run preview -- --host 0.0.0.0 --port 5173
+Restart=always
+RestartSec=2
+User=pi
+
+[Install]
+WantedBy=multi-user.target
