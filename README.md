@@ -55,11 +55,11 @@ npm --workspace apps/web run preview -- --host 0.0.0.0 --port 5173
 ```
 
 ## Raspberry Pi 5 deployment (Raspberry Pi OS)
-1. Clone repo to `/opt/motorsport-tv`.
+1. Clone repo to `/home/nonchinesesleeperagent/motorsport-tv`.
 2. Install Node 20+ and Chromium.
 3. Install dependencies + build:
    ```bash
-   cd /opt/motorsport-tv
+   cd /home/nonchinesesleeperagent/motorsport-tv
    npm install
    npm run build
    cp .env.example .env

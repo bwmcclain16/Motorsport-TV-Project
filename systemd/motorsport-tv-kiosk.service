@@ -6,7 +6,7 @@ Wants=motorsport-tv-web.service
 [Service]
 Type=simple
 Environment=APP_URL=http://localhost:5173
-ExecStart=/opt/motorsport-tv/scripts/launch-kiosk.sh
+ExecStart=/home/nonchinesesleeperagent/motorsport-tv/scripts/launch-kiosk.sh
 Restart=always
 RestartSec=3
 User=pi
