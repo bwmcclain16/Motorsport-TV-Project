@@ -1,0 +1,15 @@
+[Unit]
+Description=Motorsport TV Chromium Kiosk
+After=graphical.target motorsport-tv-web.service
+Wants=motorsport-tv-web.service
+
+[Service]
+Type=simple
+Environment=APP_URL=http://localhost:5173
+ExecStart=/home/nonchinesesleeperagent/motorsport-tv/scripts/launch-kiosk.sh
+Restart=always
+RestartSec=3
+User=pi
+
+[Install]
+WantedBy=graphical.target

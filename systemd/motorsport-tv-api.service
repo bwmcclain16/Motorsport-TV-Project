@@ -1,0 +1,15 @@
+[Unit]
+Description=Motorsport TV API
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/nonchinesesleeperagent/motorsport-tv
+EnvironmentFile=/home/nonchinesesleeperagent/motorsport-tv/.env
+ExecStart=/usr/bin/npm --workspace apps/api run start
+Restart=always
+RestartSec=2
+User=pi
+
+[Install]
+WantedBy=multi-user.target
